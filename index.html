@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      ::selection {
+        background: #212129;
+      }
+      body {
+        background: #0f0f0f;
+        height: 100%;
+      }
+      #heart {
+        position: relative;
+        width: 120px;
+        height: 90px;
+        margin: 175px auto;
+        animation: pulse 1.5s ease-out;
+        animation-iteration-count: infinite;
+      }
+      #heart:before,
+      #heart:after {
+        position: absolute;
+        content: "";
+        left: 60px;
+        top: 0;
+        border-top: 10px #cf2e3b solid;
+        width: 60px;
+        height: 80px;
+        background: #cf2e3b;
+        border-radius: 50px 50px 0 0;
+        transform: rotate(-45deg);
+        transform-origin: 0 100%;
+      }
+      #heart:after {
+        left: 0;
+        transform: rotate(45deg);
+        transform-origin: 100% 100%;
+        box-shadow: 2px 0px 1px #902029;
+      }
+      #heart:before {
+        box-shadow: 2px 2px 1px #3d0e11;
+        border-top: 10px #de6b75 solid;
+      }
+      @keyframes pulse {
+        0% {
+          transform: scale(2);
+        }
+        25% {
+          transform: scale(1.8);
+        }
+        50% {
+          transform: scale(2.1);
+        }
+        75% {
+          transform: scale(2);
+        }
+        100% {
+          transform: scale(2);
+        }
+      }
+      .txt {
+        font-family: monospace;
+        font-size: 54px;
+        color: #fff;
+        margin-top: -100px;
+        text-align: center;
+        font-size: 6.5em;
+        color: #fff;
+        letter-spacing: 2px;
+        font-weight: 700;
+        text-transform: uppercase;
+        animation: blur 1.25s ease-out infinite;
+        text-shadow: 0px 0px 5px #fff, 0px 0px 7px #fff;
+      }
+      @keyframes blur {
+        from {
+          text-shadow: 0px 0px 10px #fff, 0px 0px 10px #fff, 0px 0px 25px #fff,
+            0px 10px 100px #7b96b8, 0px -10px 100px #7b96b8;
+        }
+      }
+      @media screen and (max-width: 630px) {
+        .txt {
+          font-size: 5em;
+        }
+      }
+      @media screen and (max-width: 530px) {
+        .txt {
+          font-size: 4em;
+        }
+      }
+      @media screen and (max-width: 410px) {
+        .txt {
+          font-size: 3em;
+        }
+      }
+      @media screen and (max-width: 340px) {
+        .txt {
+          font-size: 2.5em;
+        }
+      }
+    </style>
+    <link href='http://www.fontonline.ir/css/IranNastaliq.css' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <div id="heart"></div>
+    <div class="txt" style="font-family:IranNastaliq,'IranNastaliq',tahoma;">زهـــــرا</div>
+  </body>
+</html>
